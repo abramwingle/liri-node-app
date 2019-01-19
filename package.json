@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/abramwingle/liri-node-app/issues"
   },
-  "homepage": "https://github.com/abramwingle/liri-node-app#readme"
+  "homepage": "https://github.com/abramwingle/liri-node-app#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dotenv-extended": "^2.3.0",
+    "moment": "^2.23.0",
+    "node-spotify-api": "^1.0.7"
+  }
 }
