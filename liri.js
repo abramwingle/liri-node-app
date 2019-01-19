@@ -35,7 +35,9 @@ function initial() {
             break;
 
         case "movie-this":
-
+        if (!searchValue) {
+            searchValue = "Mr Nobody"
+        }
             searchMovie();
             break;
 
@@ -74,13 +76,8 @@ function searchMovie() {
     axios.get("http://www.omdbapi.com/?t=" + searchValue + "&y=&plot=short&apikey=trilogy").then(
         function (response) {
 
-            if (!searchValue) {
-                searchValue = "Mr Nobody"
-            }
-            else if (response.data.length == 0) {
-                searchValue = "Mr Nobody"
-            }
-            else {
+            
+           
                 console.log("\nTitle - " + response.data.Title);
                 console.log("\nRelease year - " + response.data.Year);
                 console.log("\nIMDB rating - " + response.data.imdbRating);
@@ -90,7 +87,7 @@ function searchMovie() {
                 console.log("\nPlot - " + response.data.Plot);
                 console.log("\nStarring - " + response.data.Actors + "\n");
 
-            }
+            
         }
 
     );
